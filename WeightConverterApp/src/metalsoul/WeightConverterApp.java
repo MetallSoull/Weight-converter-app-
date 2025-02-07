@@ -60,12 +60,10 @@ public class WeightConverterApp implements ActionListener {
                     enterTextField.setBounds(90,13,100,20);
                     killosPanel.add(enterTextField);
 
-                    // Add the result label for displaying the result
                     result = new JLabel();
                     result.setBounds(10,50,200,20);
                     killosPanel.add(result);
 
-                    // Create a button to trigger the conversion
                     JButton convertButton = new JButton("Convert");
                     convertButton.setBounds(90, 70, 100, 25);
                     convertButton.setFocusable(false);
@@ -73,7 +71,6 @@ public class WeightConverterApp implements ActionListener {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             try {
-                                // Parse the input as a double, since weights may be decimal values
                                 double weightInPounds = Double.parseDouble(enterTextField.getText());
                                 double resultWeight = weightInPounds / 2.20462;
                                 result.setText("Your new weight in kilograms: " + Math.round(resultWeight));
